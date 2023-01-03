@@ -37,3 +37,9 @@ URLObject==2.4.3
 Werkzeug==2.0.2
 WTForms==2.3.3
 zipp==3.6.0
+gunicorn==20.1.0
+# Flask-Uploads==0.2.1
+flask-reuploaded
+python-dotenv==0.21.0
+WTForms-Components
+Flask-Mail==0.9.1
