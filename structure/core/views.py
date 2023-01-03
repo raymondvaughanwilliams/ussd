@@ -17,7 +17,7 @@ from structure import db
 
 core = Blueprint('core',__name__)
 
-@core.route('ussd')
+@core.route('/ussd')
 def ussd(request):
     if request.method == 'POST':
         session_id = request.POST.get('sessionId')
