@@ -1,4 +1,4 @@
-from flask import render_template,request,Blueprint,session,redirect,url_for,HttpResponse
+from flask import render_template,request,Blueprint,session,redirect,url_for
 # from structure.models import User,app,PaymentMethod,Payment
 # from structure.team.views import team
 from sqlalchemy.orm import load_only
@@ -24,6 +24,9 @@ def ussd(request):
         service_code = request.POST.get('serviceCode')
         phone_number = request.POST.get('phoneNumber')
         text = request.POST.get('text')
+        print("...")
+        print("number")
+        print(phone_number)
         response = ""    
         if text == "":
             response = "CON Welcome to our News subscription service \n"
@@ -60,6 +63,7 @@ def ussd(request):
             response = "END thank you for subscribing to our monthly sport news plan \n"
         elif text == "1*3*2":
             response = "END thank you for your one-off monthly sport news plan \n"
-            
-        return HttpResponse(response)
+        print("response:")
+        print(response)
+        return response
         
